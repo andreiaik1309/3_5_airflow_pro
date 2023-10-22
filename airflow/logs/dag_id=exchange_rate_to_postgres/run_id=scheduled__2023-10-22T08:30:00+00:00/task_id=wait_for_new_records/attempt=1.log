@@ -1,0 +1,27 @@
+[2023-10-22 08:40:04,148] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rate_to_postgres.wait_for_new_records scheduled__2023-10-22T08:30:00+00:00 [queued]>
+[2023-10-22 08:40:04,162] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rate_to_postgres.wait_for_new_records scheduled__2023-10-22T08:30:00+00:00 [queued]>
+[2023-10-22 08:40:04,164] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-22 08:40:04,165] {taskinstance.py:1377} INFO - Starting attempt 1 of 6
+[2023-10-22 08:40:04,166] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-22 08:40:04,183] {taskinstance.py:1397} INFO - Executing <Task(SqlSensor): wait_for_new_records> on 2023-10-22 08:30:00+00:00
+[2023-10-22 08:40:04,190] {standard_task_runner.py:52} INFO - Started process 528 to run task
+[2023-10-22 08:40:04,195] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'exchange_rate_to_postgres', 'wait_for_new_records', 'scheduled__2023-10-22T08:30:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/get_exchange_rate.py', '--cfg-path', '/tmp/tmpnw2f5nwd', '--error-file', '/tmp/tmpwjybwhmk']
+[2023-10-22 08:40:04,196] {standard_task_runner.py:80} INFO - Job 60: Subtask wait_for_new_records
+[2023-10-22 08:40:04,292] {task_command.py:371} INFO - Running <TaskInstance: exchange_rate_to_postgres.wait_for_new_records scheduled__2023-10-22T08:30:00+00:00 [running]> on host 31fbd5974cf0
+[2023-10-22 08:40:04,415] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=andrey
+AIRFLOW_CTX_DAG_ID=exchange_rate_to_postgres
+AIRFLOW_CTX_TASK_ID=wait_for_new_records
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-22T08:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-10-22T08:30:00+00:00
+[2023-10-22 08:40:04,431] {base.py:68} INFO - Using connection ID 'conn_exchange_rate' for task execution.
+[2023-10-22 08:40:04,517] {sql.py:92} INFO - Poking: SELECT COUNT(*) FROM history_rate WHERE date_rate > 
+                       '1970-01-01 00:00:00' (with parameters None)
+[2023-10-22 08:40:04,526] {base.py:68} INFO - Using connection ID 'conn_exchange_rate' for task execution.
+[2023-10-22 08:40:04,540] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-10-22 08:40:04,556] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=exchange_rate_to_***, task_id=wait_for_new_records, execution_date=20231022T083000, start_date=20231022T084004, end_date=20231022T084004
+[2023-10-22 08:40:04,609] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-10-22 08:40:04,675] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

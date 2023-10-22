@@ -1,0 +1,25 @@
+[2023-10-22 08:30:24,494] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rate_to_postgres.count_rows_in_db scheduled__2023-10-22T08:20:00+00:00 [queued]>
+[2023-10-22 08:30:24,526] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rate_to_postgres.count_rows_in_db scheduled__2023-10-22T08:20:00+00:00 [queued]>
+[2023-10-22 08:30:24,527] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-22 08:30:24,528] {taskinstance.py:1377} INFO - Starting attempt 1 of 6
+[2023-10-22 08:30:24,529] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-22 08:30:24,545] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): count_rows_in_db> on 2023-10-22 08:20:00+00:00
+[2023-10-22 08:30:24,552] {standard_task_runner.py:52} INFO - Started process 63 to run task
+[2023-10-22 08:30:24,565] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'exchange_rate_to_postgres', 'count_rows_in_db', 'scheduled__2023-10-22T08:20:00+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/get_exchange_rate.py', '--cfg-path', '/tmp/tmpffkznqdp', '--error-file', '/tmp/tmpep_2c73v']
+[2023-10-22 08:30:24,566] {standard_task_runner.py:80} INFO - Job 48: Subtask count_rows_in_db
+[2023-10-22 08:30:24,677] {task_command.py:371} INFO - Running <TaskInstance: exchange_rate_to_postgres.count_rows_in_db scheduled__2023-10-22T08:20:00+00:00 [running]> on host 31fbd5974cf0
+[2023-10-22 08:30:24,844] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=andrey
+AIRFLOW_CTX_DAG_ID=exchange_rate_to_postgres
+AIRFLOW_CTX_TASK_ID=count_rows_in_db
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-22T08:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-10-22T08:20:00+00:00
+[2023-10-22 08:30:24,865] {base.py:68} INFO - Using connection ID 'conn_exchange_rate' for task execution.
+[2023-10-22 08:30:24,902] {logging_mixin.py:115} INFO - ###### Количество строк в таблице с обменным курсом BTC к RUB:  0
+[2023-10-22 08:30:24,903] {python.py:173} INFO - Done. Returned value was: None
+[2023-10-22 08:30:24,926] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=exchange_rate_to_***, task_id=count_rows_in_db, execution_date=20231022T082000, start_date=20231022T083024, end_date=20231022T083024
+[2023-10-22 08:30:24,975] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-10-22 08:30:25,030] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

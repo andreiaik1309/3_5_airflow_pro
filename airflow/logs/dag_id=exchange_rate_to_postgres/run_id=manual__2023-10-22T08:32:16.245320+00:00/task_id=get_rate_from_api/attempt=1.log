@@ -1,0 +1,26 @@
+[2023-10-22 08:32:17,079] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rate_to_postgres.get_rate_from_api manual__2023-10-22T08:32:16.245320+00:00 [queued]>
+[2023-10-22 08:32:17,097] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rate_to_postgres.get_rate_from_api manual__2023-10-22T08:32:16.245320+00:00 [queued]>
+[2023-10-22 08:32:17,098] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-22 08:32:17,099] {taskinstance.py:1377} INFO - Starting attempt 1 of 6
+[2023-10-22 08:32:17,099] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-22 08:32:17,121] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_rate_from_api> on 2023-10-22 08:32:16.245320+00:00
+[2023-10-22 08:32:17,134] {standard_task_runner.py:52} INFO - Started process 156 to run task
+[2023-10-22 08:32:17,140] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'exchange_rate_to_postgres', 'get_rate_from_api', 'manual__2023-10-22T08:32:16.245320+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/get_exchange_rate.py', '--cfg-path', '/tmp/tmploin6rj1', '--error-file', '/tmp/tmphzmvb_c6']
+[2023-10-22 08:32:17,142] {standard_task_runner.py:80} INFO - Job 53: Subtask get_rate_from_api
+[2023-10-22 08:32:17,254] {task_command.py:371} INFO - Running <TaskInstance: exchange_rate_to_postgres.get_rate_from_api manual__2023-10-22T08:32:16.245320+00:00 [running]> on host 31fbd5974cf0
+[2023-10-22 08:32:17,379] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=andrey
+AIRFLOW_CTX_DAG_ID=exchange_rate_to_postgres
+AIRFLOW_CTX_TASK_ID=get_rate_from_api
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-22T08:32:16.245320+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-10-22T08:32:16.245320+00:00
+[2023-10-22 08:32:18,159] {logging_mixin.py:115} INFO - ##### Обменный курс BTC к  RUB получен ####
+[2023-10-22 08:32:18,160] {logging_mixin.py:115} INFO - ######### datetime_rate:  1697963524
+[2023-10-22 08:32:18,161] {logging_mixin.py:115} INFO - ########## value_rate:  2844175.37576
+[2023-10-22 08:32:18,162] {python.py:173} INFO - Done. Returned value was: None
+[2023-10-22 08:32:18,179] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=exchange_rate_to_postgres, task_id=get_rate_from_api, execution_date=20231022T083216, start_date=20231022T083217, end_date=20231022T083218
+[2023-10-22 08:32:18,245] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-10-22 08:32:18,315] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
